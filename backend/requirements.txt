@@ -1,0 +1,3 @@
+gunicorn
+flask
+duckduckgo-search
