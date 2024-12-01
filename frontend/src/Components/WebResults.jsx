@@ -46,6 +46,7 @@ export default function WebResults() {
             <div className="resultsContainer">
               {webResults.results.map((result, index) => (
                 <div className="result" key={index}>
+                  <a href={result.href}>
                   <div className="resultHead">
                     <img
                       src={`https://www.google.com/s2/favicons?domain=${
@@ -54,15 +55,14 @@ export default function WebResults() {
                       className="resultFavicon"
                       alt="favicon"
                     />
-                    <a href={result.href}>
+                    
                       <p className="result-siteName">
                         {extractDomain(result.href)}
                       </p>
                     
-                  
+                  </div>
                   <h2 className="resultHeadTitle">{result.title}</h2>
                   </a>
-                  </div>
                   <div className="resultBody">
                     <p>{result.body}</p>
                   </div>

@@ -44,6 +44,7 @@ export default function NewsResults() {
               {newsResults.results.map((result, index) => (
                 <div className="newsResult" key={index}>
                   <div className="newsContentSide">
+                  <a href={result.url}>
                     <div className="resultHead">
                       <img
                         src={`https://www.google.com/s2/favicons?domain=${
@@ -52,14 +53,14 @@ export default function NewsResults() {
                         className="resultFavicon"
                         alt="favicon"
                       />
-                      <a href={result.url}>
+                      
                         <p className="result-siteName">
                           {extractDomain(result.url)}
                         </p>
                       
                     <h2 className="resultHeadTitle">{result.title}</h2>
-                    </a>
-                    </div>
+                    
+                    </div></a>
                     <p className="resultBody">{result.body}</p>
                     <p className="newsDate">{formatDate(result.date)}</p>
                   </div>
