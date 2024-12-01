@@ -250,7 +250,7 @@ body {
 
 
   .result-siteName{
-    margin-left: 10px;
+    /* margin-left: 10px; */
     color:white;
     font-size: small;
   }
@@ -281,6 +281,7 @@ body {
     border-radius: 100%;
     height: 1.3em;
     background-color: white;
+    margin-right: 10px;
   }
 
   a {
@@ -647,7 +648,7 @@ body {
 
 
   .result-siteName{
-    margin-left: 10px;
+    /* margin-left: 10px; */
     color:white;
     font-size: small;
   }
@@ -666,6 +667,7 @@ body {
     color: #93BAF3;
     text-decoration: none;
     /* margin-left: 10px; */
+    line-height: 1.5;
     font-size: medium;
     font-weight: 500;
   }
@@ -678,6 +680,7 @@ body {
     border-radius: 100%;
     height: 1.3em;
     background-color: white;
+    margin-right: 10px;
   }
 
   a {

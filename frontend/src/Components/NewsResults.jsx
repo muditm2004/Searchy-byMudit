@@ -3,7 +3,7 @@ import { SearchContext } from "../Context/SearchContext";
 
 export default function NewsResults() {
   const { resultsFetched, isLoading, newsResults } = useContext(SearchContext);
- 
+
   function extractDomain(url) {
     if (!url) return "";
     // if (url.startsWith("/url?esrc=s&q=&rct=j&sa=U&url=")) {
@@ -30,7 +30,6 @@ export default function NewsResults() {
     return date.toLocaleDateString("en-US", options);
   }
 
-
   return (
     <>
       {!isLoading && resultsFetched && newsResults.results.length === 0 && (
@@ -54,17 +53,18 @@ export default function NewsResults() {
                         alt="favicon"
                       />
                       <a href={result.url}>
-                      <p className="result-siteName">
-                        {extractDomain(result.url)}
-                      </p>
+                        <p className="result-siteName">
+                          {extractDomain(result.url)}
+                        </p>
+                      
+                    <h2 className="resultHeadTitle">{result.title}</h2>
                     </a>
                     </div>
-                    <h2 className="resultHeadTitle">{result.title}</h2>
                     <p className="resultBody">{result.body}</p>
                     <p className="newsDate">{formatDate(result.date)}</p>
                   </div>
                   <div className="newsImgSide">
-                  <img src={result.image} />
+                    <img src={result.image} />
                   </div>
                 </div>
               ))}

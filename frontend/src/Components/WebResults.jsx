@@ -58,10 +58,11 @@ export default function WebResults() {
                       <p className="result-siteName">
                         {extractDomain(result.href)}
                       </p>
-                    </a>
-                  </div>
+                    
+                  
                   <h2 className="resultHeadTitle">{result.title}</h2>
-
+                  </a>
+                  </div>
                   <div className="resultBody">
                     <p>{result.body}</p>
                   </div>
