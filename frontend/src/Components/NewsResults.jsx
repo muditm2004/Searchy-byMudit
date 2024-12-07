@@ -58,9 +58,11 @@ export default function NewsResults() {
                           {extractDomain(result.url)}
                         </p>
                       
-                    <h2 className="resultHeadTitle">{result.title}</h2>
                     
-                    </div></a>
+                    
+                    </div>
+                    <h2 className="resultHeadTitle">{result.title}</h2>
+                    </a>
                     <p className="resultBody">{result.body}</p>
                     <p className="newsDate">{formatDate(result.date)}</p>
                   </div>
