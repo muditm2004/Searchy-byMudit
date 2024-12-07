@@ -1,6 +1,6 @@
 import time
 import random
-from flask import Flask, jsonify, send_from_directory
+from flask import Flask, jsonify, send_from_directory, redirect
 from flask_cors import CORS
 from duckduckgo_search import DDGS
 
@@ -68,6 +68,12 @@ def news_search(query):
 @app.route('/', defaults={'path': ''})
 def serve_frontend(path):
     return send_from_directory("../frontend/dist", "index.html")
+
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return redirect("/")
     
 
 if __name__ == '__main__':
