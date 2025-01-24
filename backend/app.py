@@ -4,7 +4,7 @@ from flask import Flask, jsonify, send_from_directory, redirect
 from flask_cors import CORS
 from duckduckgo_search import DDGS
 
-app = Flask(__name__, static_folder="../frontend/dist", static_url_path="/")
+app = Flask(__name__)
 
 CORS(app)
 
