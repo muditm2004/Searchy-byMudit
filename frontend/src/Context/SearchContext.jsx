@@ -18,7 +18,7 @@ export default function SContext({ children }) {
   const fetchResults = (type, query, setResults) => {
     setResultsFetched(false);
     setIsLoading(true);
-    fetch(`/${type}/${query}`)
+    fetch(`${import.meta.env.VITE_API_URL}/${type}/${query}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
