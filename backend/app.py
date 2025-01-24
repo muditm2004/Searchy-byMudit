@@ -65,9 +65,9 @@ def news_search(query):
     return jsonify(results)
 
 # Route to serve React app
-@app.route('/', defaults={'path': ''})
-def serve_frontend(path):
-    return send_from_directory("../frontend/dist", "index.html")
+# @app.route('/', defaults={'path': ''})
+# def serve_frontend(path):
+    # return send_from_directory("../frontend/dist", "index.html")
 
 
 
